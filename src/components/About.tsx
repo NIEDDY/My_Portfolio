@@ -1,9 +1,12 @@
 "use client";
 
+import React from "react";
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { GraduationCap, Target, Heart } from "lucide-react";
 import { motion } from "motion/react";
+
+
 
 interface AboutProps {
   onViewResume: () => void;
@@ -32,7 +35,7 @@ export function About({ onViewResume }: AboutProps) {
               <div className="relative w-64 h-64 mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-full opacity-20 blur-2xl" />
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdHxlbnwxfHx8fDE3NTk4MDU0NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                  src="/eddy-profile.jpg"
                   alt="Eddy Nibyose"
                   className="relative rounded-full w-64 h-64 object-cover shadow-xl"
                 />
