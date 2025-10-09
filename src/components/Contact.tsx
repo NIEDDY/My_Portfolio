@@ -102,10 +102,10 @@ export function Contact() {
                   <div>
                     <p className="text-sm text-gray-400 mb-1">Email</p>
                     <a
-                      href="mailto:eddy.nibyose@example.com"
+                      href="mailto:nieddy03@gmail.com"
                       className="hover:text-primary transition-colors text-base"
                     >
-                      eddy.nibyose@example.com
+                      nieddy03@gmail.com
                     </a>
                   </div>
                 </Card>

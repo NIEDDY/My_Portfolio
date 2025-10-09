@@ -14,7 +14,7 @@ const footerLinks = [
 const socialLinks = [
   {
     icon: Mail,
-    href: "mailto:eddy.nibyose@example.com",
+    href: "mailto:nieddy03@gmail.com",
     label: "Email",
   },
   {
@@ -91,10 +91,10 @@ export function Footer() {
               <li>Kigali, Rwanda</li>
               <li>
                 <a
-                  href="mailto:eddy.nibyose@example.com"
+                  href="mailto:nieddy03@gmail.com"
                   className="hover:text-foreground transition-colors"
                 >
-                  eddy.nibyose@example.com
+                  nieddy03@gmail.com
                 </a>
               </li>
               <li className="pt-2">
@@ -109,10 +109,10 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Eddy Nibyose. All rights reserved.
           </p>
-          <p className="text-sm text-muted-foreground flex items-center gap-1">
+          {/* <p className="text-sm text-muted-foreground flex items-center gap-1">
             Built with <Heart className="h-4 w-4 text-accent fill-accent" />{" "}
             using React & Tailwind CSS
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>
