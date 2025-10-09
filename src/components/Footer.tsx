@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Github, Linkedin, Heart } from "lucide-react";
+import { Mail, Github, Linkedin } from "lucide-react";
 
 const footerLinks = [
   { label: "Home", href: "#home" },
@@ -109,10 +109,7 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Eddy Nibyose. All rights reserved.
           </p>
-          {/* <p className="text-sm text-muted-foreground flex items-center gap-1">
-            Built with <Heart className="h-4 w-4 text-accent fill-accent" />{" "}
-            using React & Tailwind CSS
-          </p> */}
+          {/*  */}
         </div>
       </div>
     </footer>
