@@ -18,17 +18,17 @@ export function Hero({ onViewProjects, onViewResume }: HeroProps) {
     >
       {/* Floating geometric shapes */}
       <motion.div
-        className="absolute top-10 left-10 w-16 h-16 bg-indigo-500/30 rounded-full blur-2xl"
+        className="absolute top-10 left-10 w-16 h-16 bg-primary/30 rounded-full blur-2xl"
         animate={{ y: [0, 20, 0], x: [0, 15, 0] }}
         transition={{ duration: 6, repeat: Infinity, repeatType: "mirror" }}
       />
       <motion.div
-        className="absolute top-1/2 right-20 w-24 h-24 bg-pink-500/30 rounded-2xl blur-3xl"
+        className="absolute top-1/2 right-20 w-24 h-24 bg-accent/30 rounded-2xl blur-3xl"
         animate={{ y: [0, -25, 0], x: [0, -20, 0] }}
         transition={{ duration: 8, repeat: Infinity, repeatType: "mirror" }}
       />
       <motion.div
-        className="absolute bottom-20 left-1/3 w-20 h-20 bg-yellow-400/20 rounded-full blur-2xl"
+        className="absolute bottom-20 left-1/3 w-20 h-20 bg-primary/20 rounded-full blur-2xl"
         animate={{ y: [0, 15, 0], x: [0, 10, 0] }}
         transition={{ duration: 5, repeat: Infinity, repeatType: "mirror" }}
       />
@@ -47,7 +47,7 @@ export function Hero({ onViewProjects, onViewResume }: HeroProps) {
             className="space-y-6 sm:space-y-7 lg:space-y-8"
           >
             <motion.div variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }} className="space-y-3 sm:space-y-4">
-              <p className="text-indigo-500 font-medium text-base sm:text-lg lg:text-xl">Hi, I'm</p>
+              <p className="text-primary font-medium text-base sm:text-lg lg:text-xl">Hi, I'm</p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900 dark:text-white leading-tight">
                 Eddy Nibyose
               </h1>
@@ -102,7 +102,7 @@ export function Hero({ onViewProjects, onViewResume }: HeroProps) {
                 className="w-full h-auto object-cover"
               />
               <motion.div
-                className="absolute inset-0 bg-gradient-to-t from-indigo-500/20 to-transparent"
+                className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"
                 animate={{ opacity: [0.6, 0.9, 0.6] }}
                 transition={{ repeat: Infinity, duration: 4 }}
               />

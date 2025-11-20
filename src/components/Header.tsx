@@ -12,11 +12,13 @@ const navLinks = [
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Resume", href: "#resume" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("#home");
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -25,6 +27,47 @@ export function Header() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Detect active section based on scroll position
+  useEffect(() => {
+    const updateActiveSection = () => {
+      const scrollPosition = window.scrollY + 150; // Offset for header and some padding
+      const sections = navLinks.map((link) => ({
+        id: link.href.slice(1), // Remove # to get id
+        href: link.href,
+      }));
+
+      // Check from bottom to top to get the current section
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i].id);
+        if (section) {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          
+          // If scroll position is within this section
+          if (scrollPosition >= sectionTop - 100 && scrollPosition < sectionTop + sectionHeight) {
+            setActiveSection(sections[i].href);
+            return;
+          }
+        }
+      }
+
+      // If at top, set home as active
+      if (window.scrollY < 100) {
+        setActiveSection("#home");
+      }
+    };
+
+    // Update on mount and scroll
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection);
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
   }, []);
 
   const scrollToSection = (href: string) => {
@@ -55,15 +98,25 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-            {navLinks.map((link) => (
-              <button
-                key={link.href}
-                onClick={() => scrollToSection(link.href)}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {link.label}
-              </button>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.href;
+              return (
+                <button
+                  key={link.href}
+                  onClick={() => scrollToSection(link.href)}
+                  className={`text-sm font-medium transition-all duration-200 relative ${
+                    isActive
+                      ? "text-primary"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {link.label}
+                  {isActive && (
+                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full" />
+                  )}
+                </button>
+              );
+            })}
             <Button
               variant="ghost"
               size="icon"
@@ -76,7 +129,6 @@ export function Header() {
                 <Sun className="h-5 w-5" />
               )}
             </Button>
-            <Button onClick={() => scrollToSection("#contact")}>Contact</Button>
           </nav>
 
           {/* Mobile Menu */}
@@ -100,22 +152,23 @@ export function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent>
-                <div className="flex flex-col gap-6 mt-8">
-                  {navLinks.map((link) => (
-                    <button
-                      key={link.href}
-                      onClick={() => scrollToSection(link.href)}
-                      className="text-lg text-left hover:text-primary transition-colors"
-                    >
-                      {link.label}
-                    </button>
-                  ))}
-                  <Button
-                    onClick={() => scrollToSection("#contact")}
-                    className="w-full"
-                  >
-                    Contact
-                  </Button>
+                <div className="flex flex-col gap-4 mt-8">
+                  {navLinks.map((link) => {
+                    const isActive = activeSection === link.href;
+                    return (
+                      <button
+                        key={link.href}
+                        onClick={() => scrollToSection(link.href)}
+                        className={`text-lg text-left font-medium transition-all duration-200 py-2 px-3 rounded-lg ${
+                          isActive
+                            ? "text-primary bg-primary/10 border-l-4 border-l-primary"
+                            : "text-muted-foreground hover:text-primary hover:bg-muted"
+                        }`}
+                      >
+                        {link.label}
+                      </button>
+                    );
+                  })}
                 </div>
               </SheetContent>
             </Sheet>

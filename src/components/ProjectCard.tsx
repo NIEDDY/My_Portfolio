@@ -38,14 +38,14 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
       transition={{ duration: 0.5 }}
       whileHover={{ y: -8 }}
     >
-      <Card className="overflow-hidden cursor-pointer group border border-border hover:shadow-xl transition-all duration-300">
-        <div className="relative aspect-video overflow-hidden bg-muted">
+      <Card className="overflow-hidden cursor-pointer group border hover:border-primary/20 dark:hover:border-primary/30 hover:shadow-xl dark:hover:shadow-2xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1">
+        <div className="relative aspect-video overflow-hidden bg-muted rounded-t-xl">
           <ImageWithFallback
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center gap-2 p-4">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent dark:from-black/80 dark:via-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center gap-2 p-4">
             {project.demoUrl && (
               <Button
                 size="sm"
@@ -75,17 +75,17 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
           </div>
         </div>
 
-        <div className="p-6 space-y-4" onClick={onClick}>
+        <div className="p-6 space-y-4 bg-card dark:bg-card/80 backdrop-blur-sm" onClick={onClick}>
           <div>
-            <h3 className="mb-2">{project.title}</h3>
-            <p className="text-muted-foreground text-sm line-clamp-2">
+            <h3 className="mb-2 font-semibold text-lg group-hover:text-primary transition-colors duration-200">{project.title}</h3>
+            <p className="text-muted-foreground text-sm line-clamp-2 leading-relaxed">
               {project.summary}
             </p>
           </div>
 
           <div className="flex flex-wrap gap-2">
             {project.tags.map((tag) => (
-              <Badge key={tag} variant="secondary">
+              <Badge key={tag} variant="secondary" className="text-xs font-medium">
                 {tag}
               </Badge>
             ))}

@@ -9,6 +9,29 @@ import { motion } from "motion/react";
 const projects: Project[] = [
   {
     id: "1",
+    title: "Smart Cooperative Hub",
+    summary:
+      "A comprehensive web platform designed and implemented with responsive user interfaces using React, Tailwind CSS, and modern UI/UX principles to enhance user experience and optimize platform performance.",
+    image:
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb29wZXJhdGl2ZXxlbnwxfHx8fDE3NTk5NDU2MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    tags: ["React", "Tailwind CSS", "UI/UX Design"],
+    category: "Web",
+    demoUrl: "https://smartco-ophub.andasy.dev/",
+    problem:
+      "Cooperative organizations needed a modern, user-friendly platform to manage their operations, improve navigation, and enhance overall user experience.",
+    solution:
+      "Designed and implemented responsive user interfaces using React, Tailwind CSS, and modern UI/UX principles. Collaborated with a multidisciplinary team to enhance user experience, improve navigation, and optimize platform performance.",
+    role: "UI Designer - Designed responsive user interfaces, collaborated with team members to enhance user experience, and optimized platform performance.",
+    techStack: ["React", "Tailwind CSS", "UI/UX Design", "JavaScript"],
+    outcome:
+      "Successfully delivered a modern, responsive platform with improved user experience and navigation, optimized for various devices and screen sizes.",
+    gallery: [
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb29wZXJhdGl2ZXxlbnwxfHx8fDE3NTk5NDU2MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "https://images.unsplash.com/photo-1551650975-87deedd944c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXNpZ25lcnxlbnwxfHx8fDE3NTk5NDU2MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    ],
+  },
+  {
+    id: "2",
     title: "Inventory Management Dashboard",
     summary:
       "Legacy VB6 system with modern data migration plan, featuring data normalization and advanced reporting capabilities.",
@@ -30,7 +53,7 @@ const projects: Project[] = [
     ],
   },
   {
-    id: "2",
+    id: "3",
     title: "Creative Corner E-commerce",
     summary:
       "Modern e-commerce platform for local artisans to showcase and sell handmade products with integrated payment processing.",
@@ -53,7 +76,7 @@ const projects: Project[] = [
     ],
   },
   {
-    id: "3",
+    id: "4",
     title: "CHUK Patient Information System",
     summary:
       "Prototype patient management system for hospital with secure data handling and appointment scheduling.",
@@ -72,28 +95,6 @@ const projects: Project[] = [
     gallery: [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkfGVufDF8fHx8MTc1OTgxMjQxMnww&ixlib=rb-4.1.0&q=80&w=1080",
       "https://images.unsplash.com/photo-1546900703-cf06143d1239?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMGNvZGluZ3xlbnwxfHx8fDE3NTk3Nzg1OTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    ],
-  },
-  {
-    id: "4",
-    title: "Portfolio Analytics Dashboard",
-    summary:
-      "Data visualization tool for tracking and analyzing personal project metrics and performance indicators.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkfGVufDF8fHx8MTc1OTgxMjQxMnww&ixlib=rb-4.1.0&q=80&w=1080",
-    tags: ["React", "Chart.js", "Data Viz"],
-    category: "Tools",
-    repoUrl: "#",
-    problem:
-      "Needed a centralized way to track project progress, time investments, and skill development across multiple initiatives.",
-    solution:
-      "Created an interactive dashboard using React and Chart.js to visualize project timelines, skill improvements, and productivity metrics.",
-    role: "Front-End Developer - Designed UI/UX, implemented data visualization components, and integrated real-time updates.",
-    techStack: ["React", "TypeScript", "Chart.js", "Tailwind CSS"],
-    outcome:
-      "Improved project time estimation accuracy by 40% and enabled data-driven decisions for skill development priorities.",
-    gallery: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkfGVufDF8fHx8MTc1OTgxMjQxMnww&ixlib=rb-4.1.0&q=80&w=1080",
     ],
   },
 ];

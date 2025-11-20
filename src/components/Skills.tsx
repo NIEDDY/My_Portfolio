@@ -1,7 +1,6 @@
 "use client";
 
 import { Badge } from "./ui/badge";
-import { Progress } from "./ui/progress";
 import { Card } from "./ui/card";
 import { motion } from "motion/react";
 import {
@@ -10,7 +9,6 @@ import {
   Code,
   Wrench,
   BarChart,
-  FileCode,
 } from "lucide-react";
 
 const skillCategories = [
@@ -18,61 +16,61 @@ const skillCategories = [
     icon: Code,
     title: "Programming Languages",
     skills: [
-      { name: "JavaScript", level: 85 },
-      { name: "TypeScript", level: 75 },
-      { name: "PHP", level: 70 },
-      { name: "Visual Basic 6", level: 80 },
-      { name: "SQL", level: 85 },
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "HTML/CSS",
+      "C++",
     ],
   },
   {
     icon: Globe,
     title: "Web Development",
     skills: [
-      { name: "React", level: 80 },
-      { name: "HTML/CSS", level: 90 },
-      { name: "WordPress", level: 85 },
-      { name: "Tailwind CSS", level: 85 },
-      { name: "Node.js", level: 70 },
+      "React.js",
+      "Node.js",
+      "Tailwind CSS",
+      "HTML/CSS",
+      "JavaScript",
     ],
   },
   {
     icon: Database,
-    title: "Database & Data Management",
+    title: "Database Systems",
     skills: [
-      { name: "MySQL", level: 85 },
-      { name: "MS Access", level: 90 },
-      { name: "Data Normalization", level: 85 },
-      { name: "Database Design", level: 80 },
-      { name: "Data Migration", level: 75 },
+      "PostgreSQL",
+      "SQL Server",
+      "MongoDB",
+      "Database Design",
+      "Data Management",
     ],
   },
   {
     icon: Wrench,
     title: "Tools & Technologies",
     skills: [
-      { name: "Git/GitHub", level: 80 },
-      { name: "VS Code", level: 90 },
-      { name: "WooCommerce", level: 85 },
-      { name: "MS Office Suite", level: 95 },
-      { name: "Figma", level: 70 },
+      "Git/GitHub",
+      "VS Code",
+      "Figma",
+      "Node.js",
+      "MongoDB",
     ],
   },
 ];
 
 const technicalTags = [
-  "Data Analysis",
+  "Data collection & recording",
+  "Team Coordination",
+  "Teamwork",
+  "Research",
+  "Software development",
+  "Machine learning",
+  "UI/UX Design",
+  "Problem Solving",
   "API Integration",
   "Responsive Design",
-  "Database Optimization",
-  "E-commerce",
-  "Legacy System Migration",
-  "Report Generation",
   "Version Control",
   "Agile Methodology",
-  "Problem Solving",
-  "Technical Documentation",
-  "UI/UX Principles",
 ];
 
 export function Skills() {
@@ -94,7 +92,7 @@ export function Skills() {
             </p>
           </div>
 
-          {/* Skill Categories with Progress */}
+          {/* Skill Categories - Without Progress Bars */}
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
             {skillCategories.map((category, index) => {
               const Icon = category.icon;
@@ -106,24 +104,27 @@ export function Skills() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className="p-6 sm:p-8 h-full hover:shadow-lg transition-shadow">
+                  <Card className="p-6 sm:p-8 h-full hover:shadow-lg dark:hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 hover:border-primary/20 dark:hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 group">
                     <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-                      <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
+                      <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-primary/10 dark:bg-primary/20 group-hover:bg-primary/15 dark:group-hover:bg-primary/25 flex items-center justify-center flex-shrink-0 transition-colors duration-300">
+                        <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary group-hover:scale-110 transition-transform duration-300" />
                       </div>
-                      <h3 className="text-base sm:text-lg font-semibold">{category.title}</h3>
+                      <h3 className="text-base sm:text-lg font-semibold group-hover:text-primary transition-colors duration-200">{category.title}</h3>
                     </div>
-                    <div className="space-y-4 sm:space-y-5">
-                      {category.skills.map((skill) => (
-                        <div key={skill.name}>
-                          <div className="flex justify-between items-center mb-2">
-                            <span className="text-sm sm:text-base font-medium">{skill.name}</span>
-                            <span className="text-xs sm:text-sm text-muted-foreground">
-                              {skill.level}%
-                            </span>
-                          </div>
-                          <Progress value={skill.level} className="h-2" />
-                        </div>
+                    <div className="flex flex-wrap gap-2.5 sm:gap-3">
+                      {category.skills.map((skill, skillIndex) => (
+                        <motion.div
+                          key={skillIndex}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.3, delay: index * 0.1 + skillIndex * 0.05 }}
+                          whileHover={{ scale: 1.05 }}
+                        >
+                          <Badge variant="secondary" className="text-sm px-4 py-2 font-medium hover:bg-primary hover:text-primary-foreground transition-colors cursor-default">
+                            {skill}
+                          </Badge>
+                        </motion.div>
                       ))}
                     </div>
                   </Card>
@@ -138,7 +139,7 @@ export function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-card rounded-xl p-6 sm:p-8 lg:p-10 border border-border"
+            className="bg-card rounded-xl p-6 sm:p-8 lg:p-10 border border-border shadow-sm dark:shadow-md hover:shadow-lg dark:hover:shadow-xl transition-shadow duration-300"
           >
             <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
               <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
@@ -147,10 +148,19 @@ export function Skills() {
               <h3 className="text-base sm:text-lg font-semibold">Additional Competencies</h3>
             </div>
             <div className="flex flex-wrap gap-2.5 sm:gap-3">
-              {technicalTags.map((tag) => (
-                <Badge key={tag} variant="secondary" className="text-sm px-4 py-2">
-                  {tag}
-                </Badge>
+              {technicalTags.map((tag, index) => (
+                <motion.div
+                  key={tag}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <Badge variant="secondary" className="text-sm px-4 py-2 font-medium hover:bg-accent hover:text-accent-foreground transition-colors cursor-default">
+                    {tag}
+                  </Badge>
+                </motion.div>
               ))}
             </div>
           </motion.div>
