@@ -116,7 +116,7 @@ export function Projects() {
   };
 
   return (
-    <section id="projects" className="py-24 sm:py-40">
+    <section id="projects" className="py-20 sm:py-28 lg:py-36 xl:py-40">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -124,20 +124,22 @@ export function Projects() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl text-center mb-6">
-            Projects
-          </h2>
-          <p className="text-center text-muted-foreground text-lg sm:text-xl mb-16 max-w-2xl mx-auto">
-            A showcase of my technical work and problem-solving approach
-          </p>
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+              Projects
+            </h2>
+            <p className="text-muted-foreground text-base sm:text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed">
+              A showcase of my technical work and problem-solving approach
+            </p>
+          </div>
 
           {/* Filters */}
-          <div className="flex flex-wrap justify-center gap-3 mb-16">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-12 sm:mb-16 lg:mb-20">
             {categories.map((category) => (
               <Badge
                 key={category}
                 variant={selectedCategory === category ? "default" : "outline"}
-                className="cursor-pointer px-5 py-2.5 text-sm hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="cursor-pointer px-5 py-2.5 text-sm hover:bg-primary hover:text-primary-foreground hover:scale-105 transition-all duration-200"
                 onClick={() => setSelectedCategory(category)}
               >
                 {category}
@@ -149,7 +151,7 @@ export function Projects() {
           </div>
 
           {/* Project Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
             {filteredProjects.map((project) => (
               <ProjectCard
                 key={project.id}

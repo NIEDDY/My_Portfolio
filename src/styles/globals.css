@@ -35,6 +35,8 @@
   --muted-foreground: #586070;
   --accent: #00C48C;
   --accent-foreground: #ffffff;
+  --accent-purple: #8B5CF6;
+  --accent-purple-foreground: #ffffff;
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
   --border: rgba(15, 23, 36, 0.1);
@@ -138,13 +140,15 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-['Inter'];
   }
 }
 

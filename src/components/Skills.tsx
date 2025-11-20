@@ -77,7 +77,7 @@ const technicalTags = [
 
 export function Skills() {
   return (
-    <section id="skills" className="py-24 sm:py-40 bg-secondary/50">
+    <section id="skills" className="py-20 sm:py-28 lg:py-36 xl:py-40 bg-secondary/50">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -85,15 +85,17 @@ export function Skills() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl text-center mb-6">
-            Skills & Expertise
-          </h2>
-          <p className="text-center text-muted-foreground text-lg sm:text-xl mb-16 max-w-2xl mx-auto">
-            Technical proficiencies and tools I work with
-          </p>
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+              Skills & Expertise
+            </h2>
+            <p className="text-muted-foreground text-base sm:text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed">
+              Technical proficiencies and tools I work with
+            </p>
+          </div>
 
           {/* Skill Categories with Progress */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
             {skillCategories.map((category, index) => {
               const Icon = category.icon;
               return (
@@ -104,19 +106,19 @@ export function Skills() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className="p-8 h-full hover:shadow-lg transition-shadow">
-                    <div className="flex items-center gap-4 mb-8">
-                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                        <Icon className="h-6 w-6 text-primary" />
+                  <Card className="p-6 sm:p-8 h-full hover:shadow-lg transition-shadow">
+                    <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+                      <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                       </div>
-                      <h3 className="text-lg">{category.title}</h3>
+                      <h3 className="text-base sm:text-lg font-semibold">{category.title}</h3>
                     </div>
-                    <div className="space-y-5">
+                    <div className="space-y-4 sm:space-y-5">
                       {category.skills.map((skill) => (
                         <div key={skill.name}>
-                          <div className="flex justify-between mb-2.5">
-                            <span className="text-base">{skill.name}</span>
-                            <span className="text-sm text-muted-foreground">
+                          <div className="flex justify-between items-center mb-2">
+                            <span className="text-sm sm:text-base font-medium">{skill.name}</span>
+                            <span className="text-xs sm:text-sm text-muted-foreground">
                               {skill.level}%
                             </span>
                           </div>
@@ -136,15 +138,15 @@ export function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-card rounded-xl p-8 sm:p-10 border border-border"
+            className="bg-card rounded-xl p-6 sm:p-8 lg:p-10 border border-border"
           >
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
-                <BarChart className="h-6 w-6 text-accent" />
+            <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                <BarChart className="h-5 w-5 sm:h-6 sm:w-6 text-accent" />
               </div>
-              <h3 className="text-lg">Additional Competencies</h3>
+              <h3 className="text-base sm:text-lg font-semibold">Additional Competencies</h3>
             </div>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2.5 sm:gap-3">
               {technicalTags.map((tag) => (
                 <Badge key={tag} variant="secondary" className="text-sm px-4 py-2">
                   {tag}

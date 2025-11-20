@@ -52,7 +52,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-24 sm:py-40 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden"
+      className="relative py-20 sm:py-28 lg:py-36 xl:py-40 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden"
     >
       {/* Background glow */}
       <div className="absolute inset-0 opacity-25">
@@ -67,43 +67,45 @@ export function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl text-center font-semibold mb-6">
-            Get In Touch
-          </h2>
-          <p className="text-center text-gray-300 text-lg sm:text-xl mb-16 max-w-2xl mx-auto">
-            Looking for internship opportunities or interested in collaborating?
-            I'd love to hear from you!
-          </p>
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+              Get In Touch
+            </h2>
+            <p className="text-gray-300 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed">
+              Looking for internship opportunities or interested in collaborating?
+              I'd love to hear from you!
+            </p>
+          </div>
 
-          <div className="grid lg:grid-cols-2 gap-16">
+          <div className="grid lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-20">
             {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="space-y-8"
+              className="space-y-6 sm:space-y-8"
             >
               <div>
-                <h3 className="mb-6 text-2xl font-medium">Let's Connect</h3>
-                <p className="text-gray-400 text-base leading-relaxed mb-8">
+                <h3 className="mb-4 sm:mb-6 text-xl sm:text-2xl font-semibold">Let's Connect</h3>
+                <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
                   I'm currently seeking data management internships and junior
                   web developer positions. Feel free to reach out through any of
                   the following channels:
                 </p>
               </div>
 
-              <div className="space-y-5">
+              <div className="space-y-4 sm:space-y-5">
                 {/* Email */}
-                <Card className="p-5 flex items-center gap-5 bg-slate-800/50 border border-slate-700 hover:bg-slate-800 transition-all duration-300 cursor-pointer">
-                  <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-6 w-6 text-primary" />
+                <Card className="p-4 sm:p-5 flex items-center gap-4 sm:gap-5 bg-slate-800/50 border border-slate-700 hover:bg-slate-800 transition-all duration-300 cursor-pointer">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Mail className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                   </div>
-                  <div>
-                    <p className="text-sm text-gray-400 mb-1">Email</p>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xs sm:text-sm text-gray-400 mb-1">Email</p>
                     <a
                       href="mailto:nieddy03@gmail.com"
-                      className="hover:text-primary transition-colors text-base"
+                      className="hover:text-primary transition-colors text-sm sm:text-base break-words"
                     >
                       nieddy03@gmail.com
                     </a>
@@ -111,28 +113,28 @@ export function Contact() {
                 </Card>
 
                 {/* Location */}
-                <Card className="p-5 flex items-center gap-5 bg-slate-800/50 border border-slate-700 hover:bg-slate-800 transition-all duration-300 cursor-pointer">
-                  <div className="w-14 h-14 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-accent" />
+                <Card className="p-4 sm:p-5 flex items-center gap-4 sm:gap-5 bg-slate-800/50 border border-slate-700 hover:bg-slate-800 transition-all duration-300 cursor-pointer">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="h-5 w-5 sm:h-6 sm:w-6 text-accent" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400 mb-1">Location</p>
-                    <p className="text-base">Kigali, Rwanda</p>
+                    <p className="text-xs sm:text-sm text-gray-400 mb-1">Location</p>
+                    <p className="text-sm sm:text-base">Kigali, Rwanda</p>
                   </div>
                 </Card>
 
                 {/* LinkedIn */}
-                <Card className="p-5 flex items-center gap-5 bg-slate-800/50 border border-slate-700 hover:bg-slate-800 transition-all duration-300 cursor-pointer">
-                  <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Linkedin className="h-6 w-6 text-primary" />
+                <Card className="p-4 sm:p-5 flex items-center gap-4 sm:gap-5 bg-slate-800/50 border border-slate-700 hover:bg-slate-800 transition-all duration-300 cursor-pointer">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Linkedin className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                   </div>
-                  <div>
-                    <p className="text-sm text-gray-400 mb-1">LinkedIn</p>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xs sm:text-sm text-gray-400 mb-1">LinkedIn</p>
                     <a
                       href="https://linkedin.com/in/eddynibyose"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-primary transition-colors text-base"
+                      className="hover:text-primary transition-colors text-sm sm:text-base break-words"
                     >
                       linkedin.com/in/eddynibyose
                     </a>
@@ -140,17 +142,17 @@ export function Contact() {
                 </Card>
 
                 {/* GitHub */}
-                <Card className="p-5 flex items-center gap-5 bg-slate-800/50 border border-slate-700 hover:bg-slate-800 transition-all duration-300 cursor-pointer">
-                  <div className="w-14 h-14 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <Github className="h-6 w-6 text-accent" />
+                <Card className="p-4 sm:p-5 flex items-center gap-4 sm:gap-5 bg-slate-800/50 border border-slate-700 hover:bg-slate-800 transition-all duration-300 cursor-pointer">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Github className="h-5 w-5 sm:h-6 sm:w-6 text-accent" />
                   </div>
-                  <div>
-                    <p className="text-sm text-gray-400 mb-1">GitHub</p>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xs sm:text-sm text-gray-400 mb-1">GitHub</p>
                     <a
                       href="https://github.com/eddynibyose"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-primary transition-colors text-base"
+                      className="hover:text-primary transition-colors text-sm sm:text-base break-words"
                     >
                       github.com/eddynibyose
                     </a>
@@ -166,23 +168,23 @@ export function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Card className="p-8 sm:p-10 bg-slate-800/60 border border-slate-700 shadow-xl backdrop-blur">
+              <Card className="p-6 sm:p-8 lg:p-10 bg-slate-800/60 border border-slate-700 shadow-xl backdrop-blur">
                 {isSubmitted ? (
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="flex flex-col items-center justify-center py-12 text-center"
+                    className="flex flex-col items-center justify-center py-10 sm:py-12 text-center"
                   >
-                    <div className="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mb-4">
-                      <CheckCircle className="h-8 w-8 text-green-400" />
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-green-500/10 flex items-center justify-center mb-4">
+                      <CheckCircle className="h-7 w-7 sm:h-8 sm:w-8 text-green-400" />
                     </div>
-                    <h3 className="mb-2 text-xl font-medium">Message Sent!</h3>
-                    <p className="text-gray-400">
-                      Thank you for reaching out. I’ll get back to you soon.
+                    <h3 className="mb-2 text-lg sm:text-xl font-semibold">Message Sent!</h3>
+                    <p className="text-sm sm:text-base text-gray-400">
+                      Thank you for reaching out. I'll get back to you soon.
                     </p>
                   </motion.div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
                     <div className="space-y-2">
                       <Label htmlFor="name">Name</Label>
                       <Input

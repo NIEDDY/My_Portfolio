@@ -14,7 +14,7 @@ export function Hero({ onViewProjects, onViewResume }: HeroProps) {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center pt-16 sm:pt-20 bg-gray-50 dark:bg-gray-900 relative overflow-hidden"
+      className="min-h-screen flex items-center pt-20 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 lg:pb-32 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden"
     >
       {/* Floating geometric shapes */}
       <motion.div
@@ -33,8 +33,8 @@ export function Hero({ onViewProjects, onViewResume }: HeroProps) {
         transition={{ duration: 5, repeat: Infinity, repeatType: "mirror" }}
       />
 
-      <div className="max-w-screen-xl mx-auto px-6 lg:px-8 w-full z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
 
           {/* Left Column - Text */}
           <motion.div
@@ -44,33 +44,33 @@ export function Hero({ onViewProjects, onViewResume }: HeroProps) {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.15 } }
             }}
-            className="space-y-6 sm:space-y-8"
+            className="space-y-6 sm:space-y-7 lg:space-y-8"
           >
-            <motion.div variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
-              <p className="text-indigo-500 font-medium text-lg sm:text-xl">Hi, I'm</p>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gray-900 dark:text-white">
+            <motion.div variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }} className="space-y-3 sm:space-y-4">
+              <p className="text-indigo-500 font-medium text-base sm:text-lg lg:text-xl">Hi, I'm</p>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900 dark:text-white leading-tight">
                 Eddy Nibyose
               </h1>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-600 dark:text-gray-300">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-semibold text-gray-600 dark:text-gray-300 leading-tight">
                 Data Management & Web Developer
               </h2>
             </motion.div>
 
             <motion.p
               variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}
-              className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 max-w-xl leading-relaxed sm:leading-loose"
+              className="text-base sm:text-lg lg:text-xl text-gray-700 dark:text-gray-300 max-w-xl leading-relaxed"
             >
               I build data-driven tools and clean web experiences. Seeking data management internship & junior dev roles.
             </motion.p>
 
             <motion.div
               variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}
-              className="flex flex-col sm:flex-row gap-4 pt-4 sm:pt-6"
+              className="flex flex-col sm:flex-row gap-4 sm:gap-5 pt-2 sm:pt-4"
             >
               <Button
                 size="lg"
                 onClick={onViewProjects}
-                className="hover:scale-105 transition-transform duration-300"
+                className="hover:scale-105 hover:shadow-lg transition-all duration-300 min-h-[44px]"
               >
                 View Projects
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -80,7 +80,7 @@ export function Hero({ onViewProjects, onViewResume }: HeroProps) {
                 size="lg"
                 variant="outline"
                 onClick={onViewResume}
-                className="hover:scale-105 transition-transform duration-300"
+                className="hover:scale-105 hover:shadow-lg transition-all duration-300 min-h-[44px]"
               >
                 <FileText className="mr-2 h-4 w-4" />
                 View Resume
