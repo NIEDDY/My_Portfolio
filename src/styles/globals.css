@@ -3,12 +3,12 @@
 :root {
   --font-size: 16px;
   
-  /* Portfolio Design System Colors */
-  --color-primary-blue: #0B5FFF;
-  --color-accent-green: #00C48C;
-  --color-text-dark: #0F1724;
-  --color-text-mid: #586070;
-  --color-bg-light: #F6F7F9;
+  /* Portfolio Design System Colors - Modern Palette */
+  --color-primary-blue: #2563EB; /* Softer, modern indigo-blue */
+  --color-accent-green: #10B981; /* Fresh emerald green */
+  --color-text-dark: #0F172A; /* Richer dark slate */
+  --color-text-mid: #64748B; /* Modern slate gray */
+  --color-bg-light: #F8FAFC; /* Softer light background */
   
   /* Spacing Scale (4px base) */
   --spacing-xs: 4px;
@@ -22,30 +22,30 @@
   --spacing-4xl: 96px;
   
   --background: #ffffff;
-  --foreground: #0F1724;
+  --foreground: #0F172A; /* Richer dark slate */
   --card: #ffffff;
-  --card-foreground: #0F1724;
+  --card-foreground: #0F172A;
   --popover: #ffffff;
-  --popover-foreground: #0F1724;
-  --primary: #0B5FFF;
+  --popover-foreground: #0F172A;
+  --primary: #2563EB; /* Modern indigo-blue (softer than bright blue) */
   --primary-foreground: #ffffff;
-  --secondary: #F6F7F9;
-  --secondary-foreground: #0F1724;
-  --muted: #F6F7F9;
-  --muted-foreground: #586070;
-  --accent: #00C48C;
+  --secondary: #F8FAFC; /* Softer light gray */
+  --secondary-foreground: #0F172A;
+  --muted: #F1F5F9; /* Very subtle gray */
+  --muted-foreground: #64748B; /* Modern slate gray */
+  --accent: #10B981; /* Fresh emerald green */
   --accent-foreground: #ffffff;
   --accent-purple: #8B5CF6;
   --accent-purple-foreground: #ffffff;
-  --destructive: #d4183d;
+  --destructive: #EF4444; /* Softer red */
   --destructive-foreground: #ffffff;
-  --border: rgba(15, 23, 36, 0.1);
-  --input: rgba(15, 23, 36, 0.1);
-  --input-background: #F6F7F9;
-  --switch-background: #cbced4;
+  --border: rgba(15, 23, 42, 0.08); /* Subtler borders */
+  --input: rgba(15, 23, 42, 0.08);
+  --input-background: #F8FAFC;
+  --switch-background: #CBD5E1; /* Softer switch color */
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #0B5FFF;
+  --ring: #2563EB; /* Match primary */
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
