@@ -52,7 +52,7 @@ export function Hero({ onViewProjects, onViewResume }: HeroProps) {
                 Eddy Nibyose
               </h1>
               <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-semibold text-gray-600 dark:text-gray-300 leading-tight">
-                Data Management & Web Developer
+               Web Developer
               </h2>
             </motion.div>
 

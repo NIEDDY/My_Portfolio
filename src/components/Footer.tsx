@@ -45,7 +45,7 @@ export function Footer() {
           <div>
             <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Eddy Nibyose</h3>
             <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-5 leading-relaxed">
-              Data Management & Web Developer building efficient, data-driven
+             Web Developer building efficient, data-driven
               solutions.
             </p>
             <div className="flex gap-3 sm:gap-4">

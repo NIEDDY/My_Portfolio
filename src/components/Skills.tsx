@@ -41,8 +41,6 @@ const skillCategories = [
       "PostgreSQL",
       "SQL Server",
       "MongoDB",
-      "Database Design",
-      "Data Management",
     ],
   },
   {

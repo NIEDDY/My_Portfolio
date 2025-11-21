@@ -43,7 +43,7 @@ const projects: Project[] = [
       "Small businesses struggled with manual inventory tracking, leading to stock discrepancies and inefficient ordering processes.",
     solution:
       "Developed a comprehensive inventory management system using VB6 and MS Access with real-time tracking, automated alerts, and detailed reporting. Designed a migration path to modern web technologies.",
-    role: "Lead Developer & Database Designer - Designed the database schema, implemented core features, and created data normalization strategies.",
+    role: "Lead Developer - Designed the database schema, implemented core features, and created data normalization strategies.",
     techStack: ["Visual Basic 6", "MS Access", "SQL", "Crystal Reports"],
     outcome:
       "Reduced inventory tracking errors by 85%, automated reordering processes, and created a scalable database structure ready for modernization.",
