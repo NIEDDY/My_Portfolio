@@ -1,8 +1,8 @@
-# andasy.hcl app configuration file generated for eddy on Wednesday, 08-Oct-25 21:03:19 IST
+# andasy.hcl app configuration file generated for nieddy on Friday, 21-Nov-25 10:21:31 SAST
 #
 # See https://github.com/quarksgroup/andasy-cli for information about how to use this file.
 
-app_name = "eddy"
+app_name = "nieddy"
 
 app {
 
@@ -17,7 +17,7 @@ app {
   }
 
   process {
-    name = "eddy"
+    name = "nieddy"
   }
 
 }

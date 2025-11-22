@@ -61,7 +61,7 @@ const projects: Project[] = [
       "https://images.unsplash.com/photo-1658297063569-162817482fb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjB3ZWJzaXRlfGVufDF8fHx8MTc1OTgyMDgwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
     tags: ["WordPress", "WooCommerce", "PHP"],
     category: "Web",
-    demoUrl: "#",
+    demoUrl: "https://e-commerce-six-blond.vercel.app/",
     problem:
       "Local artisans lacked an accessible online platform to reach customers beyond their immediate geographic area.",
     solution:

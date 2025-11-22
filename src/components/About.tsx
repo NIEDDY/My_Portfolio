@@ -47,8 +47,8 @@ export function About({ onViewResume }: AboutProps) {
             {/* Content */}
             <div className="order-1 lg:order-2 space-y-6 sm:space-y-8">
               <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed">
-                I'm a final-year Business & Information Technology student at
-                the University of Rwanda with a passion for building efficient,
+                I'm a Business & Information Technology graduate from the University of Rwanda 
+                with a passion for building efficient, 
                 data-driven solutions that solve real-world problems.
               </p>
 
