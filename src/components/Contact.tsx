@@ -363,7 +363,7 @@ export function Contact() {
                           type="tel"
                           value={formState.phone}
                           onChange={handleChange}
-                          placeholder="Eg. + 250 780 7906 000"
+                          placeholder="Eg. +250 780 796 000"
                           className="bg-white dark:bg-white border-gray-300 dark:border-gray-300 text-gray-900 dark:text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-accent focus:border-accent transition-all duration-200 hover:border-accent/50"
                         />
                       </motion.div>
