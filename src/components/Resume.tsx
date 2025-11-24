@@ -138,6 +138,10 @@ export function Resume() {
     );
   };
 
+  const openResumePDF = () => {
+    window.open('/Resume_Eddy_Nibyose.pdf', '_blank');
+  };
+
   return (
     <section id="resume" className="py-20 sm:py-28 lg:py-36 xl:py-40">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -630,7 +634,7 @@ export function Resume() {
             transition={{ duration: 0.6 }}
             className="text-center mt-12 sm:mt-16"
           >
-            <Button size="lg" onClick={handleViewResume} className="hover:scale-105 hover:shadow-lg transition-all duration-300 min-h-[44px]">
+            <Button size="lg" onClick={openResumePDF} className="hover:scale-105 hover:shadow-lg transition-all duration-300 min-h-[44px]">
               <FileText className="mr-2 h-4 w-4" />
               View Full Resume (PDF)
             </Button>
